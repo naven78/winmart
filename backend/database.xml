@@ -1,0 +1,154 @@
+<database>
+    <products>
+        <product>
+            <name>Gà Rán</name>
+            <category>fried_foods</category>
+            <image>images/fried_chicken.png</image>
+            <price>50000 VND</price>
+        </product>
+        <product>
+            <name>Khoai Tây Chiên</name>
+            <category>fried_foods</category>
+            <image>images/french_fries.png</image>
+            <price>20000 VND</price>
+        </product>
+        <product>
+            <name>Chả Giò</name>
+            <category>fried_foods</category>
+            <image>images/spring_rolls.png</image>
+            <price>30000 VND</price>
+        </product>
+        <product>
+            <name>Hành Tây Chiên</name>
+            <category>fried_foods</category>
+            <image>images/onion_rings.png</image>
+            <price>25000 VND</price>
+        </product>
+        <product>
+            <name>Đậu Hũ Chiên</name>
+            <category>fried_foods</category>
+            <image>images/fried_tofu.png</image>
+            <price>15000 VND</price>
+        </product>
+        <product>
+            <name>Bánh Mì</name>
+            <category>fast_food</category>
+            <image>images/burger.png</image>
+            <price>60000 VND</price>
+        </product>
+        <product>
+            <name>Pizza</name>
+            <category>fast_food</category>
+            <image>images/pizza.png</image>
+            <price>80000 VND</price>
+        </product>
+        <product>
+            <name>Xúc Xích</name>
+            <category>fast_food</category>
+            <image>images/hot_dog.png</image>
+            <price>30000 VND</price>
+        </product>
+        <product>
+            <name>Bánh Sandwich</name>
+            <category>fast_food</category>
+            <image>images/sandwich.png</image>
+            <price>40000 VND</price>
+        </product>
+        <product>
+            <name>Cá Chiên và Khoai Tây</name>
+            <category>fast_food</category>
+            <image>images/fish_and_chips.png</image>
+            <price>70000 VND</price>
+        </product>
+        <product>
+            <name>Kem</name>
+            <category>creamery</category>
+            <image>images/ice_cream.png</image>
+            <price>25000 VND</price>
+        </product>
+        <product>
+            <name>Bánh Phô Mai</name>
+            <category>creamery</category>
+            <image>images/cheese_cake.png</image>
+            <price>30000 VND</price>
+        </product>
+        <product>
+            <name>Sinh Tố Sữa</name>
+            <category>creamery</category>
+            <image>images/milkshake.png</image>
+            <price>35000 VND</price>
+        </product>
+        <product>
+            <name>Sữa Chua</name>
+            <category>creamery</category>
+            <image>images/yogurt.png</image>
+            <price>20000 VND</price>
+        </product>
+        <product>
+            <name>Bơ</name>
+            <category>creamery</category>
+            <image>images/butter.png</image>
+            <price>40000 VND</price>
+        </product>
+        <product>
+            <name>Cà Phê</name>
+            <category>hot_drinks</category>
+            <image>images/coffee.png</image>
+            <price>30000 VND</price>
+        </product>
+        <product>
+            <name>Trà</name>
+            <category>hot_drinks</category>
+            <image>images/tea.png</image>
+            <price>20000 VND</price>
+        </product>
+        <product>
+            <name>Sô-cô-la Nóng</name>
+            <category>hot_drinks</category>
+            <image>images/hot_chocolate.png</image>
+            <price>35000 VND</price>
+        </product>
+        <product>
+            <name>Trà Thảo Mộc</name>
+            <category>hot_drinks</category>
+            <image>images/herbal_tea.png</image>
+            <price>25000 VND</price>
+        </product>
+        <product>
+            <name>Latte</name>
+            <category>hot_drinks</category>
+            <image>images/latte.png</image>
+            <price>40000 VND</price>
+        </product>
+        <product>
+            <name>Cà Rốt</name>
+            <category>vegetables</category>
+            <image>images/carrot.png</image>
+            <price>15000 VND</price>
+        </product>
+        <product>
+            <name>Bông Cải Xanh</name>
+            <category>vegetables</category>
+            <image>images/broccoli.png</image>
+            <price>20000 VND</price>
+        </product>
+        <product>
+            <name>Rau Bina</name>
+            <category>vegetables</category>
+            <image>images/spinach.png</image>
+            <price>18000 VND</price>
+        </product>
+        <product>
+            <name>Cà Chua</name>
+            <category>vegetables</category>
+            <image>images/tomato.png</image>
+            <price>12000 VND</price>
+        </product>
+        <product>
+            <name>Dưa Leo</name>
+            <category>vegetables</category>
+            <image>images/cucumber.png</image>
+            <price>10000 VND</price>
+        </product>
+    </products>
+</database>

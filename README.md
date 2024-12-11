@@ -1,58 +1,105 @@
-# 🍔 Fryo - Grocery Shopping  App template kit [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+# Winmart Shopping App
 
-A Flutter UI template of a Grocery Shopping App similar to [Uplabs](https://www.uplabs.com/posts/grocery-shopping-full-app).
+A Vietnamese grocery shopping app built with Flutter and Node.js.
 
-> **Disclaimer:** This repository is the continuation of the publically archived [FlutterGrocery-ShoppingAppUI](https://github.com/ahkohd/FlutterGrocery-ShoppingAppUI) repository.
+## Project Structure
 
-Download and try out the android application.
+- `lib/` - Flutter app source code
+- `backend/` - Node.js backend server
+- `images/` - Product images and assets
+- `build.sh` - Main build script for creating production builds
 
-<a href="./app-release.apk"><img src="https://playerzon.com/asset/download.png" width="200"></img></a>
+## Prerequisites
 
-# 🎥 Demo
+- Flutter SDK
+- Node.js and npm
+- Android Studio or VS Code with Flutter extensions
+- Android SDK for building Android APK
 
-![demo](./fryo.gif)
+## Development Setup
 
-# 📸 Screenshots
+1. Install dependencies:
+   ```bash
+   # Install Flutter dependencies
+   flutter pub get
 
-The screenshots below are taken on a android emulator.
+   # Install backend dependencies
+   cd backend
+   npm install
+   cd ..
+   ```
 
-| Welcome Page                                           | Sign Up Page                                        |
-| ------------------------------------------------------ | --------------------------------------------------- |
-| <img src="./screenshots/welcome_page.png" width="300"> | <img src="screenshots/signup_page.png" width="300"> |
+2. Start the backend server:
+   ```bash
+   cd backend
+   node server.js
+   ```
 
-| Sign In Page                                        | Dashboard Page                                         |
-| --------------------------------------------------- | ------------------------------------------------------ |
-| <img src="screenshots/signin_page.png" width="300"> | <img src="screenshots/dashboard_page.png" width="300"> |
+3. Run the Flutter app:
+   ```bash
+   flutter run
+   ```
 
+## Building for Production
 
-| Product Page                                         |
-| ---------------------------------------------------- |
-| <img src="screenshots/product_page.png" width="300"> |
+1. Update the production API URL:
+   - Open `lib/src/config/api_config.dart`
+   - Set your production server URL in `prodApiUrl`
 
-# Requirements
+2. Run the build script:
+   ```bash
+   chmod +x build.sh
+   ./build.sh
+   ```
 
-- Any Operating System (e.g. MacOS X, Linux, Windows)
-- Any IDE with Flutter SDK installed (e.g. IntelliJ, Android Studio, VSCode etc)
-- A little knowledge of Dart and Flutter
+   This will:
+   - Build the backend for production
+   - Build the Flutter app in release mode
+   - Create a `dist` directory containing:
+     - `app-release.apk` - Android app
+     - `backend/` - Production backend files
 
-# Getting Started
+## Deployment
 
-This project is a starting point for a Flutter application.
+1. Deploy the backend:
+   - Copy the contents of `dist/backend/` to your server
+   - Install Node.js on your server
+   - Run `npm install` in the backend directory
+   - Start the server with `node server.js` (or use PM2 for production)
 
-A few resources to get you started if this is your first Flutter project:
+2. Install the Android app:
+   - Copy `dist/app-release.apk` to your Android device
+   - Install the APK
 
-- [Install Flutter](https://docs.flutter.dev/get-started/install)
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+## Features
 
-For help getting started with Flutter, view the [online documentation](https://flutter.io/docs), which offers tutorials, samples, guidance on mobile development, and a full API reference.
+- Browse products by category
+- Search functionality
+- Shopping cart
+- Checkout process
+- Product details view
+- Vietnamese language support
 
-# Contributing
+## Backend API Endpoints
 
-Do you want contributing to this project?
+- `GET /api/products` - Get all products
+- `GET /api/products?category=<category>` - Get products by category
+- `GET /api/products/:name` - Get product by name
+- `PATCH /api/products/:name/like` - Toggle product like status
 
-Perfect! Please go to the [Contributing Guidelines](CONTRIBUTING.md).
+## Database
 
-# LICENSE
+The app uses an XML database (`backend/database.xml`) for storing product information. The structure includes:
+- Product name
+- Price
+- Category
+- Image path
+- Discount information
 
-[MIT](./LICENSE.md)
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request

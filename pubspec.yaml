@@ -1,50 +1,66 @@
-name: fryo
-description: A food ordering app template kit.
-
+name: winmart
+description: A Vietnamese grocery shopping app.
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.1.1 <4.0.0'
+  sdk: '>=3.0.6 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-
-  cupertino_icons: ^1.0.6
-  flutter_rating_bar: ^4.0.1
-  page_transition: ^2.0.9
-
+  provider: ^6.0.5
+  cupertino_icons: ^1.0.2
+  http: ^0.13.3
+  page_transition: ^2.0.0
+  flutter_rating_bar: ^4.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: ^2.0.0
-  
-# The following section is specific to Flutter packages.
+
 flutter:
   uses-material-design: true
+  
   assets:
-    - images/akara.png
-    - images/coca-cola.png
-    - images/hamburger.png
-    - images/lemonade.png
-    - images/pancake.png
-    - images/pasta.png
-    - images/strawberry.png
-    - images/tequila.png
-    - images/vodka.png
+    - images/
     - images/welcome.png
+    - images/hamburger.png
+    - images/pasta.png
+    - images/akara.png
+    - images/strawberry.png
+    - images/coca-cola.png
+    - images/lemonade.png
+    - images/vodka.png
+    - images/tequila.png
+    - images/pancake.png
+    - images/sandwich.png
+    - images/burger.png
+    - images/fish_and_chips.png
+    - images/pizza.png
+    - images/cheese_cake.png
+    - images/hot_dog.png
+    - images/fried_chicken.png
+    - images/french_fries.png
+    - images/milkshake.png
+    - images/onion_rings.png
+    - images/ice_cream.png
+    - images/yogurt.png
+    - images/spring_rolls.png
+    - images/fried_tofu.png
+    - images/coffee.png
+    - images/tea.png
+    - images/hot_chocolate.png
+    - images/herbal_tea.png
+    - images/latte.png
+    - images/carrot.png
+    - images/broccoli.png
+    - images/spinach.png
+    - images/tomato.png
+    - images/cucumber.png
+
   fonts:
-    - family: Poppins
-      fonts:
-        - asset: fonts/Poppins-Regular.ttf
-        - asset: fonts/Poppins-Medium.ttf
-        - asset: fonts/Poppins-Bold.ttf
-          weight: 700
-    - family: Pacifico
-      fonts:
-        - asset: fonts/Pacifico.ttf
     - family: Fryo
       fonts:
         - asset: fonts/Fryo.ttf

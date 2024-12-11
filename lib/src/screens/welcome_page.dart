@@ -1,81 +1,114 @@
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
-
 import '../shared/styles.dart';
 import '../shared/colors.dart';
-import '../shared/buttons.dart';
-import './singup_page.dart';
-import './signin_page.dart';
+import '../shared/language.dart';
 
 class WelcomePage extends StatefulWidget {
   final String pageTitle;
 
-  const WelcomePage({required this.pageTitle});
+  WelcomePage({Key? key, required this.pageTitle}) : super(key: key);
 
   @override
-  WelcomePageState createState() => WelcomePageState();
+  _WelcomePageState createState() => _WelcomePageState();
 }
 
-class WelcomePageState extends State<WelcomePage> {
+class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
+        child: Container(
+          padding: EdgeInsets.all(20.0),
           child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Image.asset('images/welcome.png', width: 190, height: 190),
-          Container(
-            margin: EdgeInsets.only(bottom: 10, top: 0),
-            child: Text('Fryo!', style: logoStyle),
-          ),
-          Container(
-            width: 200,
-            margin: EdgeInsets.only(bottom: 0),
-            child: froyoTextBtn('Sign In', () {
-              Navigator.pushReplacement(
-                  context,
-                  PageTransition(
-                      alignment: Alignment.center,
-                      type: PageTransitionType.rotate,
-                      duration: Duration(seconds: 1),
-                      child: SignInPage()));
-            }),
-          ),
-          Container(
-            width: 200,
-            padding: EdgeInsets.all(0),
-            child: froyoOutlinedBtn('Sign Up', () {
-              Navigator.pushReplacement(
-                  context,
-                  PageTransition(
-                      alignment: Alignment.center,
-                      type: PageTransitionType.rotate,
-                      duration: Duration(seconds: 1),
-                      child: SignUpPage()));
-              // Navigator.of(context).pushReplacementNamed('/signup');
-            }),
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 25),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Text('Langauage:', style: TextStyle(color: darkText)),
-                Container(
-                  margin: EdgeInsets.only(left: 6),
-                  child: Text('English >',
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                width: 200,
+                height: 200,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.1),
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      'images/welcome.png',
+                      width: 120,
+                      height: 120,
+                      fit: BoxFit.contain,
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      'WinMart',
                       style: TextStyle(
-                          color: Colors.black, fontWeight: FontWeight.w500)),
-                )
-              ],
-            ),
-          )
-        ],
-      )),
-      backgroundColor: bgColor,
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: primaryColor,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 40.0),
+              Text(
+                AppText.vi['welcome']!,
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black87,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 40.0),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: primaryColor,
+                  padding: EdgeInsets.symmetric(horizontal: 100, vertical: 15),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                ),
+                onPressed: () => Navigator.of(context).pushNamed('/signin'),
+                child: Text(AppText.vi['sign_in']!),
+              ),
+              SizedBox(height: 20.0),
+              OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: primaryColor,
+                  padding: EdgeInsets.symmetric(horizontal: 100, vertical: 15),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  side: BorderSide(color: primaryColor),
+                ),
+                onPressed: () => Navigator.of(context).pushNamed('/signup'),
+                child: Text(AppText.vi['sign_up']!),
+              ),
+              SizedBox(height: 40.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Ngôn ngữ: '),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text('Tiếng Việt >'),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

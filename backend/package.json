@@ -1,0 +1,17 @@
+{
+  "name": "winmart-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "mkdir -p dist && cp -r server.js database.xml package.json dist/"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "cors": "^2.8.5",
+    "xml2js": "^0.4.23"
+  }
+}
