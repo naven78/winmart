@@ -1,0 +1,11 @@
+{
+  "name": "winmart",
+  "version": "1.0.0",
+  "description": "Winmart Shopping App",
+  "scripts": {
+    "start": "cd backend && npm install && node server.js"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
