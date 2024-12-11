@@ -3,7 +3,7 @@ class ApiConfig {
   static const String devApiUrl = 'http://10.0.2.2:3000';
   
   // Production URL - Render.com URL
-  static const String prodApiUrl = 'https://winmart-backend.onrender.com';
+  static const String prodApiUrl = 'https://winmart-vyr2.onrender.com';
   
   // Set this to false for production build
   static const bool isDevelopment = false;
